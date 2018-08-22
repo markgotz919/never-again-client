@@ -11,7 +11,57 @@
       <script src="public/vendor.js" type="text/javascript" charset="utf-8" defer></script>
       <script src="public/application.js" type="text/javascript" charset="utf-8" defer></script>
     </head>
+    <header>
+      <h1>NEVER-AGAIN!</h1>
+      <!-- <h2>The anti-todo list</h2> -->
+    </header>
+
+    <p id="message"></p>
+
     <body>
-      <h1>Browser Template</h1>
+
+        <form id="sign-up" class="border">
+            <fieldset>
+              <legend>Sign up!</legend>
+              <input type="text" name="credentials[email]" placeholder="Email">
+              <input type="password" name="credentials[password]" placeholder="Password">
+              <input type="password" name="credentials[password_confirmation]" placeholder="Confirm Password">
+              <input type="submit" value="Sign up!">
+            </fieldset>
+          </form>
+          
+              
+        
+        
+          <form id="sign-in" class="border">
+            <fieldset>
+              <legend>Sign in!</legend>
+              <input type="text" name="credentials[email]" placeholder="Email">
+              <input type="password" name="credentials[password]" placeholder="Password">
+              <input type="submit" value="Sign in!">
+            </fieldset>
+          </form>
+        
+          <form id="change-password" class="border">
+            <fieldset>
+              <legend>Change Password!</legend>
+              <input type="password" name="passwords[old]" placeholder="Old Password">
+              <input type="password" name="passwords[new]" placeholder="New Password">
+              <input type="submit" value="Change Password!">
+            </fieldset>
+          </form>
+        
+          <form id="sign-out" class="border">
+            <fieldset>
+              <legend>Sign Out!</legend>
+              <input type="submit" value="Sign Out!">
+            </fieldset>
+          </form>
+        </nav>
+        
+          <button type="button" id="show-meals">Show my never-agains!</button>
+        
+         
+    
     </body>
 </html>
