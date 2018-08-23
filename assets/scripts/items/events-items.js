@@ -87,6 +87,7 @@ const updateItem = function (event) {
     event.preventDefault()
     console.log("updateItem")
     const data = getFormFields(this)
+    console.log(data)
     api.updateItem(data)
     .then((result) => {
       console.log(result)

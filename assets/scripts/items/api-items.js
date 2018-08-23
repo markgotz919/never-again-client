@@ -22,7 +22,7 @@ const deleteItem = function (data) {
   console.log("reached delete")
   console.log(data)
   return $.ajax({
-    url: config.apiUrl +'/items/'+  data.items.id,
+    url: config.apiUrl +'/items/'+  data.item.id,
     method: 'DELETE',
     headers: {
       Authorization: 'Token token=' +store.user.token
@@ -37,7 +37,7 @@ const deleteItem = function (data) {
 const updateItem = function (data) {
  
   return $.ajax({
-    url: config.apiUrl + '/items/'+ data.items.id,
+    url: config.apiUrl + '/items/'+ data.item.id,
     method: 'PATCH',
     headers: {
       Authorization: 'Token token=' + store.user.token
