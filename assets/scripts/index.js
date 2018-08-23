@@ -3,19 +3,19 @@
 const store = require('./store')
 
 const authEvents = require('./auth/events')
-// const mealEvents = require('./items/events-meals.js')
+const itemEvents = require('./items/events-items.js')
 
 
 
 $(() => {
   console.log(authEvents)
-//   mealEvents.mealHandlers()
-  authEvents.addHandlers()
+ itemEvents.itemHandlers();
+  authEvents.addHandlers();
 $("#change-password, #sign-out").hide();
-$("#new-meal").hide();
-$("#show-meals").hide();
-$("#delete-meal").hide();
-$("#update-meal").hide()
+$("#new-item").hide();
+$("#show-items").hide();
+$("#delete-item").hide();
+$("#update-item").hide()
 })
 
  ///function to display message

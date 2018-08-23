@@ -2,7 +2,7 @@
 
 const store = require('../store')
 
-// const mealEvents = require('../items/events-meals.js')
+const itemEvents = require('../items/events-items.js')
 
 
 const signUpSuccess = function (data) {
@@ -22,7 +22,7 @@ const signInSuccess = function (data) {
   $('#message').css('background-color', 'green')
  
   store.user = data.user
-  $("#change-password, #sign-out, #new-meal,#show-meals, #delete-meal, #update-meal").show();
+  $("#change-password, #sign-out, #new-item,#show-items, #delete-item, #update-item").show();
   $("#sign-up, #sign-in").hide();
   
 

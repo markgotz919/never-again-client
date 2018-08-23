@@ -59,7 +59,51 @@
           </form>
         </nav>
         
-          <button type="button" id="show-meals">Show my never-agains!</button>
+          <button type="button" id="show-items">Show my never-agains!</button>
+
+          <section id="items"></section>
+
+          <form id="new-item" class="border">
+            <fieldset>
+              <legend>new never-again!</legend>
+              <input type="text" name="item[title]" placeholder="item name">
+              <br>
+              <input type="text" name="item[why]" placeholder="why?">
+              <input type="checkbox" name="item[never]" value="true" id="never-again">
+              <label for="never-again">never-again!</label>
+              <br>
+              <input type="checkbox" name="item[never_ever]" value="true" id="never-ever-again">
+              <label for="never-ever-again">never-ever-again!</label>
+              <br>
+              <input type="checkbox" name="item[omdb]" value="true" id="omdb">
+              <label for="omdb">over my dead body!!</label>
+              <input type="number" name="item[image]" value=1/>
+              <input type="submit" value="add it" id="add-item">
+            </fieldset>
+          </form>
+        
+          <form id="delete-item" class="border">
+            <fieldset>
+              <legend>delete never-again!</legend>
+              <input type="text" name="items[id]" placeholder="never-again! id here">
+              <input type="submit" value="delete never-again!" id="negate-item">
+            </fieldset>
+          </form>
+        
+        
+          <form id="update-item" class="border">
+            <fieldset>
+              <legend>update-never-again!</legend>
+              <input type="text" name="items[id]" placeholder="never-again! id here">
+              <input type="text" name="items[title]" placeholder="type corrected never-again!">
+              <input type="text" name="items[why]" placeholder="corrected why">
+              <input type="number"name="items[image]"placeholder="corrected image">
+              <input type="submit" value="update my never-again!" id="patch-item">
+            </fieldset>
+          </form>
+        </body>
+        </html>
+          
         
          
     
