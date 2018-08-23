@@ -21,7 +21,7 @@ function showItems() {
       for (let i = 0; i < neverAgain.length; i++) {
         let item = neverAgain[i]
         let item_li = $("<li class='never-again'></li>")
-        item_li.text(`ID:${item.id}: ${item.item}, ${item.why}, ${item.image}`)
+        item_li.text(`ID:${item.id}: ${item.item}, ${item.why}, ${item.number}`)
         item_li.id = item.id
         items_list.append(item_li)
       }
@@ -29,7 +29,7 @@ function showItems() {
       for (let i = 0; i < neverEverAgain.length; i++) {
         let item = neverEverAgain[i]
         let item_li = $("<li class='never-ever-again'></li>")
-        item_li.text(`ID:${item.id}: ${item.item}, ${item.why}, ${item.image}`)
+        item_li.text(`ID:${item.id}: ${item.item}, ${item.why}, ${item.number}`)
         item_li.id = item.id
         items_list.append(item_li)
       }
@@ -37,7 +37,7 @@ function showItems() {
       for (let i = 0; i < omdb.length; i++) {
         let item = omdb[i]
         let item_li = $("<li class='omdb'></li>")
-        item_li.text(`ID:${item.id}: ${item.item}, ${item.why}, ${item.image}`)
+        item_li.text(`ID:${item.id}: ${item.item}, ${item.why}, ${item.number}`)
         item_li.id = item.id
         items_list.append(item_li)
       }
@@ -54,9 +54,9 @@ function showItems() {
 
 const addItem = function (event) {
   event.preventDefault()
-  console.log("addItem")
+  // console.log("addItem")
   const data = getFormFields(this)
-  console.log(data)
+  // console.log(data)
   api.addItem(data)
     .then((result) => {
       console.log(result)

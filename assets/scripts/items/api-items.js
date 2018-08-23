@@ -50,7 +50,7 @@ const updateItem = function (data) {
 //GET ITEMS
 
 const getItems = function () {
-  console.log("this is api-meals, get meals")
+  console.log("this is api-itmes, get items")
   return $.ajax({
     url: config.apiUrl + '/items',
     method: 'GET',
