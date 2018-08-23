@@ -12,8 +12,8 @@ function showItems() {
     .then((result) => {
       console.log(result.items)
       const allItemsResults = result.items
-      const neverAgain = allItemsResults.filter(m => m.neverAgain)
-      const neverEverAgain = allItemsResults.filter(m => m.nevereEverAgain)
+      const neverAgain = allItemsResults.filter(m => m.never)
+      const neverEverAgain = allItemsResults.filter(m => m.never_ever)
       const omdb = allItemsResults.filter(m => m.omdb)
 
       const items_list = $("<ul></ul>")
@@ -21,7 +21,7 @@ function showItems() {
       for (let i = 0; i < neverAgain.length; i++) {
         let item = neverAgain[i]
         let item_li = $("<li class='never-again'></li>")
-        item_li.text(`ID:${item.id}: ${item.item}, ${item.why}, ${item.number}`)
+        item_li.html(`ID:${item.id}: ${item.title}, ${item.why}, <img src="assets/icons/icon${item.number}.png"/>`)
         item_li.id = item.id
         items_list.append(item_li)
       }
@@ -29,7 +29,7 @@ function showItems() {
       for (let i = 0; i < neverEverAgain.length; i++) {
         let item = neverEverAgain[i]
         let item_li = $("<li class='never-ever-again'></li>")
-        item_li.text(`ID:${item.id}: ${item.item}, ${item.why}, ${item.number}`)
+        item_li.html(`ID:${item.id}: ${item.title}, ${item.why}, <img src="assets/icons/icon${item.number}.png"/>`)
         item_li.id = item.id
         items_list.append(item_li)
       }
@@ -37,13 +37,13 @@ function showItems() {
       for (let i = 0; i < omdb.length; i++) {
         let item = omdb[i]
         let item_li = $("<li class='omdb'></li>")
-        item_li.text(`ID:${item.id}: ${item.item}, ${item.why}, ${item.number}`)
+        item_li.html(`ID:${item.id}: ${item.title}, ${item.why}, <img src="assets/icons/icon${item.number}.png"/>`)
         item_li.id = item.id
         items_list.append(item_li)
       }
 
-      $("#items").html(items_list);
-      // $("#items button").click(randomMealPick)
+      $("#items").html(items_list).show();
+    
     })
 
 
