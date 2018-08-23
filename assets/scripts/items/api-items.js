@@ -22,7 +22,7 @@ const deleteItem = function (data) {
   console.log("reached delete")
   console.log(data)
   return $.ajax({
-    url: config.apiUrl +'/items/'+  data.item.id,
+    url: config.apiUrl +'/items/'+  data.items.id,
     method: 'DELETE',
     headers: {
       Authorization: 'Token token=' +store.user.token

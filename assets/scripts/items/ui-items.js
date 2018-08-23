@@ -39,7 +39,7 @@ const updateSuccess = function () {
   }
   
   function deleteItemSuccess(form){
-    $('#message').text('Your never-again has been deleted. God help you.')
+    console.log('Your never-again has been deleted. God help you.')
     $('#message').css('background-color', 'green')
     form.reset()
     $('#show-items').click()
