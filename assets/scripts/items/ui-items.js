@@ -39,7 +39,7 @@ const updateSuccess = function () {
   }
   
   function deleteItemSuccess(form){
-    console.log('Your never-again has been deleted. God help you.')
+    $('#message')('Your never-again has been deleted. God help you!')
     $('#message').css('background-color', 'green')
     form.reset()
     $('#show-items').click()
@@ -47,7 +47,7 @@ const updateSuccess = function () {
   }
   
   function deleteItemFailure(error){
-    console.log(error)
+    // console.log(error)
     $('#message').text('Error on deleting')
     $('#message').css('background-color', 'red')
     $('#delete-item').trigger('reset')
@@ -56,6 +56,7 @@ const updateSuccess = function () {
   
   
   function updateItemSuccess(form){
+    // console.log(this)
     $('#message').text('Your item has been updated.')
     $('#message').css('background-color', 'green')
     form.reset()
