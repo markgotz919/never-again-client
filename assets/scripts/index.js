@@ -16,6 +16,7 @@ $("#new-item").hide();
 $("#show-items").hide();
 $("#delete-item").hide();
 $("#update-item").hide()
+$("body").removeClass("startUp")
 })
 
  ///function to display message

@@ -15,33 +15,41 @@ function showItems() {
       const neverAgain = allItemsResults.filter(m => m.never)
       const neverEverAgain = allItemsResults.filter(m => m.never_ever)
       const omdb = allItemsResults.filter(m => m.omdb)
-
-      const items_list = $("<ul></ul>")
+      console.log("")
+      const items_list = $("<div></div>")
       items_list.append($("<h3>NEVER-AGAIN!</h3>"))
+      let table = $("<table>")
       for (let i = 0; i < neverAgain.length; i++) {
         let item = neverAgain[i]
-        let item_li = $("<li class='never-again'></li>")
-        item_li.html(`ID:${item.id}: ${item.title}, ${item.why}, <img src="assets/icons/icon${item.number}.png"/>`)
+        let item_li = $("<tr class='never-again'></tr>")
+        item_li.html(`<td>ID:${item.id}</td><td>${item.title}</td><td>${item.why}</td><td><img src="assets/icons/icon${item.number}.png"/></td>`)
         item_li.id = item.id
-        items_list.append(item_li)
+        table.append(item_li)
       }
+      items_list.append(table)
       items_list.append($("<h3>NEVER-EVER-AGAIN!</h3>"))
+      table = $("<table>")
       for (let i = 0; i < neverEverAgain.length; i++) {
         let item = neverEverAgain[i]
-        let item_li = $("<li class='never-ever-again'></li>")
-        item_li.html(`ID:${item.id}: ${item.title}, ${item.why}, <img src="assets/icons/icon${item.number}.png"/>`)
+        let item_li = $("<tr class='never-again'></tr>")
+        item_li.html(`<td>ID:${item.id}</td><td>${item.title}</td><td>${item.why}</td><td><img src="assets/icons/icon${item.number}.png"/></td>`)
         item_li.id = item.id
-        items_list.append(item_li)
+        table.append(item_li)
       }
+      items_list.append(table)
       items_list.append($("<h3>OVER MY DEAD BODY!</h3>"))
+      table = $("<table>")
       for (let i = 0; i < omdb.length; i++) {
         let item = omdb[i]
-        let item_li = $("<li class='omdb'></li>")
-        item_li.html(`ID:${item.id}: ${item.title}, ${item.why}, <img src="assets/icons/icon${item.number}.png"/>`)
+        let item_li = $("<tr class='never-again'></tr>")
+        item_li.html(`<td>ID:${item.id}</td><td>${item.title}</td><td>${item.why}</td><td><img src="assets/icons/icon${item.number}.png"/></td>`)
         item_li.id = item.id
-        items_list.append(item_li)
+        table.append(item_li)
       }
+      items_list.append(table)
 
+      console.log("items-list", items_list)
+      
       $("#items").html(items_list).show();
     
     })
@@ -56,7 +64,12 @@ const addItem = function (event) {
   event.preventDefault()
   // console.log("addItem")
   const data = getFormFields(this)
-  // console.log(data)
+  console.log(data)
+  if (!data.item.never && !data.item.never_ever && !data.item.omdb){
+   return ui.incompleteForm();
+  }
+  console.log(data)
+  
   api.addItem(data)
     .then((result) => {
       console.log(result)
@@ -73,6 +86,7 @@ const deleteItem = function (event) {
   event.preventDefault()
   console.log("deleteItem")
   const data = getFormFields(this)
+  console.log(data)
   api.deleteItem(data)
   .then((result) => {
     
@@ -102,7 +116,7 @@ const updateItem = function (event) {
 const itemHandlers = () => {
   $('#show-items').click(showItems)
   $('#new-item').on('submit', addItem)
-  $('#delete-item').on('submit', deleteItem)
+  $('#delete-item').on('click', deleteItem)
   $('#update-item').on('submit', updateItem)
 
 }

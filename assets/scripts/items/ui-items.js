@@ -33,21 +33,26 @@ const updateSuccess = function () {
     console.log(error)
     $('#message').text('Error on adding never-again')
     $('#message').css('background-color', 'red')
-    form.reset()
-  
-    
+    form.reset()  
   }
   
+  function incompleteForm() {
+    $('#message').text('Please select at least one checkbox')
+    $('#message').css('background-color', 'red')
+  }
   function deleteItemSuccess(form){
-    $('#message')('Your never-again has been deleted. God help you!')
+    $('#message').text('Your never-again has been deleted. God help you!')
     $('#message').css('background-color', 'green')
     form.reset()
     $('#show-items').click()
   
   }
+
+
   
   function deleteItemFailure(error){
-    // console.log(error)
+    console.log("failure")
+    console.log(error)
     $('#message').text('Error on deleting')
     $('#message').css('background-color', 'red')
     $('#delete-item').trigger('reset')
@@ -79,6 +84,7 @@ const updateSuccess = function () {
     updateFailure,
     addItemSuccess,
     addItemFailure,
+    incompleteForm,
     deleteItemSuccess,
     updateItemSuccess,
     updateItemFailure,

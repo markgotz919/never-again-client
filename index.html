@@ -11,14 +11,16 @@
       <script src="public/vendor.js" type="text/javascript" charset="utf-8" defer></script>
       <script src="public/application.js" type="text/javascript" charset="utf-8" defer></script>
     </head>
-    <header>
-      <h1>NEVER-AGAIN!</h1>
-      <!-- <h2>The anti-todo list</h2> -->
-    </header>
+   
+    <body class="startUp">
+
+        <header>
+            <h1>NEVER-AGAIN!</h1>
+            <!-- <h2>The anti-todo list</h2> -->
+          </header>
 
     <p id="message"></p>
-
-    <body>
+      
 
         <form id="sign-up" class="border">
             <fieldset>
@@ -69,7 +71,7 @@
               <input type="text" name="item[title]" placeholder="item name">
               <br>
               <input type="text" name="item[why]" placeholder="why?">
-              <input type="checkbox" name="item[never]" value="true" id="never-again">
+              <input type="checkbox" name="item[never]" value="true" id="never-again" checked>
               <label for="never-again">never-again!</label>
               <br>
               <input type="checkbox" name="item[never_ever]" value="true" id="never-ever-again">
