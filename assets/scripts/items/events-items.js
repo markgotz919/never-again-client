@@ -32,7 +32,7 @@ function showItems() {
       for (let i = 0; i < neverEverAgain.length; i++) {
         let item = neverEverAgain[i]
         let item_li = $("<tr class='never-again'></tr>")
-        item_li.html(`<td>ID:${item.id}</td><td>${item.title}</td><td>${item.why}</td><td><img src="assets/icons/icon${item.number}.png"/></td>`)
+        item_li.html(`<td>ID:${item.id}</td><td>${item.title}</td><td>${item.why}</td><td><img src="public/icon${item.number}.png"/></td>`)
         item_li.id = item.id
         table.append(item_li)
       }
@@ -42,7 +42,7 @@ function showItems() {
       for (let i = 0; i < omdb.length; i++) {
         let item = omdb[i]
         let item_li = $("<tr class='never-again'></tr>")
-        item_li.html(`<td>ID:${item.id}</td><td>${item.title}</td><td>${item.why}</td><td><img src="assets/icons/icon${item.number}.png"/></td>`)
+        item_li.html(`<td>ID:${item.id}</td><td>${item.title}</td><td>${item.why}</td><td><img src="public/icon${item.number}.png"/></td>`)
         item_li.id = item.id
         table.append(item_li)
       }
