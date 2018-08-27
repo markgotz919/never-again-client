@@ -22,7 +22,7 @@ function showItems() {
       for (let i = 0; i < neverAgain.length; i++) {
         let item = neverAgain[i]
         let item_li = $("<tr class='never-again'></tr>")
-        item_li.html(`<td>ID:${item.id}</td><td>${item.title}</td><td>${item.why}</td><td><img src="assets/icons/icon${item.number}.png"/></td>`)
+        item_li.html(`<td>ID:${item.id}</td><td>${item.title}</td><td>${item.why}</td><td><img src="public/icon${item.number}.png"/></td>`)
         item_li.id = item.id
         table.append(item_li)
       }
