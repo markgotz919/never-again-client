@@ -23,6 +23,9 @@ f) API
 g) Git and GitHub
 h) Photoshop
 
+Required Dependencies:
+NPM install
+
 
 
 It is fun to be able to come up with different ideas for a website, but I find it difficult to design and plan the way single page websites should look.  It is also sometimes hard to work under tight deadlines.  It is also frustrating to keep track of variables, and in the future I will try to keep a running list of the variables I use for reference.  
