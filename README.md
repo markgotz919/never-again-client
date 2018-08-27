@@ -10,6 +10,9 @@ Here is the link to my wire frame, Entity Relationship Diagram, and user stories
 
 https://drive.google.com/open?id=1AtVC8XSw30OJEdcmG3waLXBHRMjLmkjh
 
+Here is an image of the working app:
+<img width="1440" alt="screen shot 2018-08-27 at 11 50 58 am" src="https://user-images.githubusercontent.com/22770385/44670004-8e088100-a9ef-11e8-9204-f6037a9a4aaf.png">
+
 Technologies Used:
 a) HTML
 b) CSS
