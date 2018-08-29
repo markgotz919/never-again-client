@@ -4,7 +4,7 @@ const store = require("../store")
 // CREATE ITEM
 
 const addItem  = function (data) {
-  console.log("reached create")
+  // console.log("reached create")
   return $.ajax({
     url: config.apiUrl + '/items',
     method: 'POST',
@@ -19,8 +19,8 @@ const addItem  = function (data) {
 //DELETE ITEM
 
 const deleteItem = function (data) {
-  console.log("reached delete")
-  console.log(data)
+  // console.log("reached delete")
+  // console.log(data)
   return $.ajax({
     url: config.apiUrl +'/items/'+  data.item.id,
     method: 'DELETE',
@@ -50,7 +50,7 @@ const updateItem = function (data) {
 //GET ITEMS
 
 const getItems = function () {
-  console.log("this is api-itmes, get items")
+  // console.log("this is api-itmes, get items")
   return $.ajax({
     url: config.apiUrl + '/items',
     method: 'GET',

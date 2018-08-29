@@ -12,12 +12,12 @@ const updateSuccess = function () {
   }
   
   const getItemsSuccess = function (data){
-    console.log("get never-agains successful",data)
+    // console.log("get never-agains successful",data)
   
   }
   
   function getItemsFailure(error){
-    console.log(error)
+    // console.log(error)
     $('#message').text('Error on retrieval')
     $('#message').css('background-color', 'red')
   }
@@ -30,7 +30,7 @@ const updateSuccess = function () {
   }
   
   function addItemFailure(error){
-    console.log(error)
+    // console.log(error)
     $('#message').text('Error on adding never-again')
     $('#message').css('background-color', 'red')
     form.reset()  
@@ -51,8 +51,8 @@ const updateSuccess = function () {
 
   
   function deleteItemFailure(error){
-    console.log("failure")
-    console.log(error)
+    // console.log("failure")
+    // console.log(error)
     $('#message').text('Error on deleting')
     $('#message').css('background-color', 'red')
     $('#delete-item').trigger('reset')
@@ -71,7 +71,7 @@ const updateSuccess = function () {
   
   
   function updateItemFailure(error){
-    console.log(error)
+    // console.log(error)
     $('#message').text('Error on updating item')
     $('#message').css('background-color', 'red')
     $('#update-meal').trigger('reset')

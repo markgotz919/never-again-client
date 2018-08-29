@@ -6,7 +6,7 @@ const getFormFields = require(`../../../lib/get-form-fields`)
 ////// SHOW ITEMS//////
 
 function showItems() {
-  console.log("showItems")
+  // console.log("showItems")
   api.getItems()
     //.then(ui.getItemsSuccess)
     .then((result) => {
@@ -15,7 +15,7 @@ function showItems() {
       const neverAgain = allItemsResults.filter(m => m.never)
       const neverEverAgain = allItemsResults.filter(m => m.never_ever)
       const omdb = allItemsResults.filter(m => m.omdb)
-      console.log("")
+      // console.log("")
       const items_list = $("<div></div>")
       items_list.append($("<h3>NEVER-AGAIN!</h3>"))
       let table = $("<table>")
@@ -48,7 +48,7 @@ function showItems() {
       }
       items_list.append(table)
 
-      console.log("items-list", items_list)
+      // console.log("items-list", items_list)
       
       $("#items").html(items_list).show();
     
@@ -64,15 +64,15 @@ const addItem = function (event) {
   event.preventDefault()
   // console.log("addItem")
   const data = getFormFields(this)
-  console.log(data)
+  // console.log(data)
   if (!data.item.never && !data.item.never_ever && !data.item.omdb){
    return ui.incompleteForm();
   }
-  console.log(data)
+  // console.log(data)
   
   api.addItem(data)
     .then((result) => {
-      console.log(result)
+      // console.log(result)
       //newItem = result
       ui.addItemSuccess(this)
     })
@@ -84,13 +84,13 @@ const addItem = function (event) {
 
 const deleteItem = function (event) {
   event.preventDefault()
-  console.log("deleteItem")
+  // console.log("deleteItem")
   const data = getFormFields(this)
-  console.log(data)
+  // console.log(data)
   api.deleteItem(data)
   .then((result) => {
     
-    console.log(result)
+    // console.log(result)
     //newItem = result
     ui.deleteItemSuccess(this)
   })
@@ -99,12 +99,12 @@ const deleteItem = function (event) {
 ////// UPDATE AN ITEM//////
 const updateItem = function (event) {
     event.preventDefault()
-    console.log("updateItem")
+    // console.log("updateItem")
     const data = getFormFields(this)
-    console.log(data)
+    // console.log(data)
     api.updateItem(data)
     .then((result) => {
-      console.log(result)
+      // console.log(result)
       
       ui.updateItemSuccess(this)
     })

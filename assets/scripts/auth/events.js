@@ -6,10 +6,10 @@ const api = require('./api')
 const ui = require('./ui')
 const store = require('../store')
 
-console.log("hi")
+// console.log("hi")
 
 const onSignUp = function (event) {
-    console.log("got here")
+    // console.log("got here")
   event.preventDefault()
  
 
@@ -57,7 +57,7 @@ const addHandlers = () => {
   $('#sign-out').on('submit', onSignOut)
   $('#change-password').on('submit', onChangePassword)
 }
-console.log("hi")
+// console.log("hi")
 module.exports = {
   addHandlers
 }

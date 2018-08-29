@@ -8,7 +8,7 @@ const itemEvents = require('./items/events-items.js')
 
 
 $(() => {
-  console.log(authEvents)
+  // console.log(authEvents)
  itemEvents.itemHandlers();
   authEvents.addHandlers();
 $("#change-password, #sign-out").hide();
@@ -23,12 +23,12 @@ $("#new-item input[type='checkbox'], #update-item input[type='checkbox']").on("f
  ///function to display message
   
  function messageDisplay(message) {
-    console.log(message)
+    // console.log(message)
   }
 
   function handleCheckBoxes(e){ 
     e.target.parentElement.querySelectorAll("input[type='checkbox']").forEach(checkbox => {
-      console.log(checkbox,e.target);
+      // console.log(checkbox,e.target);
       if(checkbox.id===e.target.id){
         e.target.checked=true;
       }
