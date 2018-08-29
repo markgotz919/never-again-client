@@ -116,7 +116,7 @@ const updateItem = function (event) {
 const itemHandlers = () => {
   $('#show-items').click(showItems)
   $('#new-item').on('submit', addItem)
-  $('#delete-item').on('click', deleteItem)
+  $('#delete-item').on('submit', deleteItem)
   $('#update-item').on('submit', updateItem)
 
 }
