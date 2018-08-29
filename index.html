@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+    <head>
+      <title>Example</title>
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+
+      <!-- Do not add `link` tags-->
+      <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+
+      <!-- Do not add `script` tags-->
+      <script src="public/vendor.js" type="text/javascript" charset="utf-8" defer></script>
+      <script src="public/application.js" type="text/javascript" charset="utf-8" defer></script>
+    </head>
+   
+    <body class="startUp">
+
+        <header>
+            <h1>NEVER-AGAIN!</h1>
+            <!-- <h2>The anti-todo list</h2> -->
+          </header>
+
+    <p id="message"></p>
+      
+
+        <form id="sign-up" class="border">
+            <fieldset>
+              <legend>Sign up!</legend>
+              <input type="text" name="credentials[email]" placeholder="Email">
+              <input type="password" name="credentials[password]" placeholder="Password">
+              <input type="password" name="credentials[password_confirmation]" placeholder="Confirm Password">
+              <input type="submit" value="Sign up!">
+            </fieldset>
+          </form>
+          
+              
+        
+        
+          <form id="sign-in" class="border">
+            <fieldset>
+              <legend>Sign in!</legend>
+              <input type="text" name="credentials[email]" placeholder="Email">
+              <input type="password" name="credentials[password]" placeholder="Password">
+              <input type="submit" value="Sign in!">
+            </fieldset>
+          </form>
+        
+          <form id="change-password" class="border">
+            <fieldset>
+              <legend>Change Password!</legend>
+              <input type="password" name="passwords[old]" placeholder="Old Password">
+              <input type="password" name="passwords[new]" placeholder="New Password">
+              <input type="submit" value="Change Password!">
+            </fieldset>
+          </form>
+        
+          <form id="sign-out" class="border">
+            <fieldset>
+              <legend>Sign Out!</legend>
+              <input type="submit" value="Sign Out!">
+            </fieldset>
+          </form>
+        </nav>
+        
+          <button type="button" id="show-items">Show my never-agains!</button>
+
+          <section id="items"></section>
+
+          <!-- CREATE NEW ITEM FORM -->
+
+          <form id="new-item" class="border">
+            <fieldset>
+              <legend>new never-again!</legend>
+              <input type="text" name="item[title]" placeholder="item name">
+              <br>
+              <input type="text" name="item[why]" placeholder="why?">
+              <input type="checkbox" name="item[never]" value="true" id="never-again" checked>
+              <label for="never-again">never-again!</label>
+              <br>
+              <input type="checkbox" name="item[never_ever]" value="true" id="never-ever-again">
+              <label for="never-ever-again">never-ever-again!</label>
+              <br>
+              <input type="checkbox" name="item[omdb]" value="true" id="omdb">
+              <label for="omdb">over my dead body!!</label>
+              <label><input type="radio" name="item[number]" value="1" checked="checked"/><img src="public/icon1.png"></label>
+              <label><input type="radio" name="item[number]" value="2"/><img src="public/icon2.png"></label>
+              <label><input type="radio" name="item[number]" value="3"/><img src="public/icon3.png"></label>
+              <label><input type="radio" name="item[number]" value="4"/><img src="public/icon4.png"></label>
+              <label><input type="radio" name="item[number]" value="5"/><img src="public/icon5.png"></label>
+              <label><input type="radio" name="item[number]" value="6"/><img src="public/icon6.png"></label>
+              <label><input type="radio" name="item[number]" value="7"/><img src="public/icon7.png"></label>
+              <label><input type="radio" name="item[number]" value="8"/><img src="public/icon8.png"></label>
+              <label><input type="radio" name="item[number]" value="9"/><img src="public/icon9.png"></label>
+              <label><input type="radio" name="item[number]" value="10"/><img src="public/icon10.png"></label>
+
+              <input type="submit" value="add it" id="add-item">
+            </fieldset>
+          </form>
+
+           <!-- DELETE ITEM FORM-->
+        
+          <form id="delete-item" class="border">
+            <fieldset>
+              <legend>delete never-again!</legend>
+              <input type="number" name="item[id]" placeholder="never-again! id here">
+              <input type="submit" value="delete never-again!" id="negate-item">
+            </fieldset>
+          </form>
+        
+           <!-- DELETE ITEM FORM -->
+        
+          <form id="update-item" class="border">
+            <fieldset>
+              <legend>update-never-again!</legend>
+              <input type="text" name="item[id]" placeholder="never-again! id here">
+              <input type="text" name="item[title]" placeholder="type corrected never-again!">
+              <input type="text" name="item[why]" placeholder="corrected why">
+              <label><input type="radio" name="item[number]" value="1" checked="checked"/><img src="public/icon1.png"></label>
+              <label><input type="radio" name="item[number]" value="2"><img src="public/icon2.png"></label>
+              <label><input type="radio" name="item[number]" value="3"/><img src="public/icon3.png"></label>
+              <label><input type="radio" name="item[number]" value="4"/><img src="public/icon4.png"></label>
+              <label><input type="radio" name="item[number]" value="5"/><img src="public/icon5.png"></label>
+              <label><input type="radio" name="item[number]" value="6"/><img src="public/icon6.png"></label>
+              <label><input type="radio" name="item[number]" value="7"/><img src="public/icon7.png"></label>
+              <label><input type="radio" name="item[number]" value="8"/><img src="public/icon8.png"></label>
+              <label><input type="radio" name="item[number]" value="9"/><img src="public/icon9.png"></label>
+              <label><input type="radio" name="item[number]" value="10"/><img src="public/icon10.png"></label>
+              <input type="submit" value="update my never-again!" id="patch-item">
+            </fieldset>
+          </form>
+        </body>
+        </html>
+          
+        
+         
+    
+    </body>
+</html>
